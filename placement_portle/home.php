@@ -41,7 +41,7 @@ mysqli_select_db($conn,'quizdbase');
 <body>
     <div class="container">
     <br>
-    <h1 class="text-center text-primary">PLACEMENET MANAGEMENT QUIZ</h1>
+    <h1 class="text-center text-primary">PLACEMENT MANAGEMENT QUIZ</h1>
     <br>
 
 
@@ -54,7 +54,7 @@ mysqli_select_db($conn,'quizdbase');
     <form action="check.php" method="POST">
 
     <?php
-    for($i=1;$i<6;$i++){
+    for($i=1;$i<12;$i++){
     $q = "SELECT * FROM `questions` WHERE qid = $i";
     $query = mysqli_query($conn,$q);
 

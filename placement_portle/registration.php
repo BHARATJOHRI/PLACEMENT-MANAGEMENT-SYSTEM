@@ -1,7 +1,7 @@
-<?php
+    <?php
 
 session_start();
-
+header('location:login.php');
 
 $servername='localhost';
 $user='root';
@@ -27,14 +27,12 @@ $result = mysqli_query($conn,$q);
 $num = mysqli_num_rows($result);
 
 if($num == 1){
-    
-        $_SESSION['username'] = $name;
-        header('location:home.php');
-
-
+    echo "Duplicate data";
 }
 else{
-    header('location:login.php');
+    $qy = "insert into signin(name, password) values ('$name','$pass')";
+    mysqli_query($conn, $qy);
+    echo "HEllo";
 }
 
 
